@@ -60,11 +60,16 @@ The following demonstrates a screenshot of the deployed application:
 
 ## Links
 
-Unfortunately, I have some major issues when deploying this application to Heroku. Professor Han gave me a couple of links to try and troubleshoot the issue but I had no luck in figuring it out. I did submit a ticket through Heroku to see if they could help me figure it out so i can re-submit in the fututre. I decided to deploy the website to GitHub and provide both links to show my effort.
 
-Link to GitHub Deployed webpage: [GitHub Application Link]()
+Link to Heroku Site: [Heroku Application Link](https://valstechblog.herokuapp.com/).
 
-Link to broken Hroku Site: [Broken Heroku Application Link](https://git.heroku.com/cooltechblog.git)
+Link to github repository: [Github](https://github.com/Val-gee/valstechblog)
+
+## Issues with Heroku 
+
+Unfortunately, I had some major issues when deploying this application to Heroku. Professor Han gave me a couple of links to try and troubleshoot the issue but I had no luck in figuring it out. 
+
+During the original deployment to Heroku, I forgot to include node_modules folder in the .gitignore file and it caused problems with the deployement. Professor Han suggested to create a new repository in github and try to deploy again, this time with the correct folders in the .gitignore file. His suggestion worked but unfortunately the repo does not have the history of all my commits for the last week and a half. The following is the error code I got when deploying the original code. Thank you for understanding.
 
 This is the error code I see in Heroku Logs after application failes to load:
 2023-01-24T14:05:53.593006+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=cooltechblog.herokuapp.com request_id=d5c65271-c57f-4d4f-9c06-6da548f2def4 fwd="68.196.246.20" dyno= connect= service= status=503 bytes= protocol=https
