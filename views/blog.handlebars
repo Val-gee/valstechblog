@@ -1,0 +1,31 @@
+<div class="contanier">
+    <div class="row justify-content-around">
+        <div class="text-center col-4">
+            <h2>{{name}}</h2>
+            <p>Created by: {{user.name}} on {{format_date date_created}}</p>
+            <hr>
+            <p>{{description}}</p>
+        </div>
+        <div class="col-4">
+            {{#if logged_in}}
+            <form class="form new-comment-form">
+                <div class="form-group">
+                    <label for="comment-text">Comment:</label>
+                    <textarea class="form-input" id="comment-text" name="comment-text"></textarea>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+            {{/if}}
+            <div class="form-group">
+                <h2 class="text-center">Comments</h2>
+                <hr>
+                {{#each comments as |comment|}}
+                <h2>{{comment.comment}}</h2>
+                <p>Created on: {{format_date comment.date_created}}</p>
+                {{/each}}
+                <h2></h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/comment.js"></script>
