@@ -1,4 +1,4 @@
-# 14 Challenge: The Tech Blog
+# The Tech Blog
 
 ## Description
 
